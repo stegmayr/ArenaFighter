@@ -10,6 +10,7 @@ namespace ArenaFighter
         public int strength;
         public int damage;
         public int health;
+        public bool alive;
 
         public Fighter(string name)
         {
@@ -17,7 +18,23 @@ namespace ArenaFighter
             this.name = name;
             this.strength = randomInt.Next(1, 11);
             this.damage = randomInt.Next(1, 6);
-            this.health = randomInt.Next(1, 16);
+            this.health = randomInt.Next(10, 21);
+            this.alive = true;
+        }
+
+        public Fighter()
+        {
+            Random randomInt = new Random();
+            this.name = "Bosse";
+            this.strength = randomInt.Next(1, 11);
+            this.damage = randomInt.Next(1, 6);
+            this.health = randomInt.Next(5, 11);
+            this.alive = true;
+        }
+
+        public override string ToString()
+        {
+            return $"Name: {name}\nStrength: {strength}\nDamage: {damage}\nHealth: {health}";
         }
     }
 }
