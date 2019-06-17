@@ -34,7 +34,7 @@ namespace ArenaFighter
 
         public override string ToString()
         {
-            return $"Name: {name}\nStrength: {strength}\nDamage: {damage}\nHealth: {health}";
+            return health > 0 ? $"Name: {name}\nStrength: {strength}\nDamage: {damage}\nHealth: {health}" : $"Name: {name}\nStrength: {strength}\nDamage: {damage}\nHealth: Dead";
         }
     }
 }

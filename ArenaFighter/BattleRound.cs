@@ -30,7 +30,7 @@ namespace ArenaFighter
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"{opponent.name} attacks {player.name}! {player.name} takes {opponent.damage} damage{(player.health > 0 ? "." : ", and falls to the graound dead!")}");
                 Console.ResetColor();
-                Console.Write($"Remaning health: {player.name} ({player.health}), {opponent.name} ({opponent.health}).\n\n");
+                Console.Write($"Remaning health: {player.name} ({player.health}), {opponent.name} ({opponent.health}).\n");
 
             }
             else if (player.strength + diceRollUser > opponent.strength + diceRollOpponent)
@@ -41,11 +41,11 @@ namespace ArenaFighter
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"{player.name} attacks {opponent.name}! {opponent.name} takes {player.damage} damage{(opponent.health > 0 ? "." : ", and falls to the graound dead!")}");
                 Console.ResetColor();
-                Console.Write($"Remaning health: {player.name} ({player.health}), {opponent.name} ({opponent.health}).\n\n");
+                Console.Write($"Remaning health: {player.name} ({player.health}), {opponent.name} ({opponent.health}).\n");
             }
             else
             {
-                Console.Write($"\n--------------\nRolls: {player.name} {player.strength + diceRollUser} ({diceRollUser}+{player.strength}) vs {opponent.name} {opponent.strength + diceRollOpponent} ({diceRollOpponent}+{opponent.strength})\nEvenly matched, the combatants circel each other, looking for a better opportunity.\nRemaning Health: {player.name} ({player.health}), {opponent.name} ({opponent.health}).\n\n");
+                Console.Write($"\n--------------\nRolls: {player.name} {player.strength + diceRollUser} ({diceRollUser}+{player.strength}) vs {opponent.name} {opponent.strength + diceRollOpponent} ({diceRollOpponent}+{opponent.strength})\nEvenly matched, the combatants circel each other, looking for a better opportunity.\nRemaning Health: {player.name} ({player.health}), {opponent.name} ({opponent.health}).\n");
             }
         }
     }
