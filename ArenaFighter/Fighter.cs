@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lexicon.CSharp.InfoGenerator;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -25,7 +26,8 @@ namespace ArenaFighter
         public Fighter()
         {
             Random randomInt = new Random();
-            this.name = "Bosse";
+            var nameGenerator = new InfoGenerator(randomInt.Next(1, 101));
+            this.name = nameGenerator.NextFirstName();
             this.strength = randomInt.Next(1, 11);
             this.damage = randomInt.Next(1, 6);
             this.health = randomInt.Next(5, 11);
