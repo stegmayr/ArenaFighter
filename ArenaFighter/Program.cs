@@ -42,7 +42,7 @@ namespace ArenaFighter
                     else if ((result.KeyChar == 'r') || (result.KeyChar == 'R'))
                     {
                         gameScore = gameScore + 4;
-                        Console.WriteLine("\n\nYou have ended the violence by not fighting!");                      
+                        Console.WriteLine("\n\nYou have ended the violence by not fighting!");
                         retired = true;
                         break;
                     }

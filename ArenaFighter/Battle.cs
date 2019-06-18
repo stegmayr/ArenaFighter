@@ -8,14 +8,12 @@ namespace ArenaFighter
     {
         Fighter opponent;
         Fighter player;
-        string opponentName;
         bool win = false;
 
         public Battle(Fighter player)
         {
             this.player = player;
             this.opponent = new Fighter();
-            opponentName = opponent.name;
         }
 
         public bool Start()
