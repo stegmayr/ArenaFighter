@@ -42,7 +42,7 @@ namespace ArenaFighter
         {
             Random randomInt = new Random();
             var nameGenerator = new InfoGenerator(randomInt.Next(1, 101));
-            string name = nameGenerator.NextFirstName();
+            string name = nameGenerator.NextFirstName(Gender.Male);
 
             return char.ToUpper(name[0]) + name.Substring(1);
         }
