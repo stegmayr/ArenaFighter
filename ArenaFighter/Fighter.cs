@@ -18,7 +18,7 @@ namespace ArenaFighter
             this.name = name;
             this.strength = randomInt.Next(1, 11);
             this.damage = randomInt.Next(1, 6);
-            this.health = randomInt.Next(10, 21);
+            this.health = randomInt.Next(10, 16);
             this.alive = true;
         }
 

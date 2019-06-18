@@ -30,7 +30,7 @@ namespace ArenaFighter
                 newBattleRound.Start();
             }
 
-            if(player.health > 0)
+            if (player.health > 0)
             {
                 player.health = player.health + 2;
                 win = true;
