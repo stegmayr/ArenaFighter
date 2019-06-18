@@ -26,8 +26,7 @@ namespace ArenaFighter
         public Fighter()
         {
             Random randomInt = new Random();
-            var nameGenerator = new InfoGenerator(randomInt.Next(1, 101));
-            this.name = nameGenerator.NextFirstName();
+            this.name = NameGenerator();
             this.strength = randomInt.Next(1, 11);
             this.damage = randomInt.Next(1, 6);
             this.health = randomInt.Next(5, 11);
@@ -37,6 +36,15 @@ namespace ArenaFighter
         public override string ToString()
         {
             return health > 0 ? $"Name: {name}\nStrength: {strength}\nDamage: {damage}\nHealth: {health}" : $"Name: {name}\nStrength: {strength}\nDamage: {damage}\nHealth: Dead";
+        }
+
+        static string NameGenerator()
+        {
+            Random randomInt = new Random();
+            var nameGenerator = new InfoGenerator(randomInt.Next(1, 101));
+            string name = nameGenerator.NextFirstName();
+
+            return char.ToUpper(name[0]) + name.Substring(1);
         }
     }
 }

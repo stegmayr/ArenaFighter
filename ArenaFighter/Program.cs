@@ -15,7 +15,7 @@ namespace ArenaFighter
 
 
             Console.Write("\n----Welcome to Arena-Fighter----\n\nEnter a name for your fighter: ");
-            Fighter userFighter = new Fighter(Console.ReadLine());
+            Fighter userFighter = new Fighter(Console.ReadLine().Trim());
 
             while (!retired && alive)
             {
@@ -27,12 +27,13 @@ namespace ArenaFighter
                     ConsoleKeyInfo result = Console.ReadKey();
                     if ((result.KeyChar == 'h') || (result.KeyChar == 'H'))
                     {
+                        gameScore = gameScore + 2;
                         Battle currentBattle = new Battle(userFighter);
                         alive = currentBattle.Start();
 
                         if (alive)
                         {
-                            gameScore = gameScore + 2;
+                            gameScore = gameScore + 3;
                         }
 
                         battleHistory.Add(currentBattle);
@@ -40,8 +41,8 @@ namespace ArenaFighter
                     }
                     else if ((result.KeyChar == 'r') || (result.KeyChar == 'R'))
                     {
-                        Console.WriteLine("\n\nYou have ended the violence by not fighting!");
-                        gameScore++;
+                        gameScore = gameScore + 4;
+                        Console.WriteLine("\n\nYou have ended the violence by not fighting!");                      
                         retired = true;
                         break;
                     }
