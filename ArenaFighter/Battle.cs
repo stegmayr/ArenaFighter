@@ -30,8 +30,12 @@ namespace ArenaFighter
 
             if (player.health > 0)
             {
-                player.health = player.health + 2;
                 win = true;
+            }
+
+            if(player.health > 0 && player.health < 15)
+            {
+                player.health = player.health + 2;
             }
 
             return player.health > 0 ? true : false;
